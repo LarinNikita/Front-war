@@ -144,15 +144,13 @@
 
                         <p><b>Изображение для новости</b></p>
                         <label class="input-file">
-                            <input type="file" name="file">
+                            <input type="file" name="file" onchange="previewFile()">
+                            <img src="img/icons/bx-download.svg" alt="download">
                             <span>Выберите файл</span>
                         </label>
+                        <img class="preview" src="" height="100" alt="">
 
-                        <!-- <div class="news-add__form--bottom"> -->
-                            <button type="submit">Опубликовать</button>
-                        <!-- </div> -->
-
-
+                        <button class="btn-form" type="submit">Опубликовать</button>
 
                     </form>
 
