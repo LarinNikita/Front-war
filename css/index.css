@@ -204,23 +204,23 @@
 
 /* ============================================================================= */
 
-.news-page__head {
+.page__head {
     display: flex;
     justify-content: space-between;
 }
 
-.news-page__head .caption {
+.page__head .caption {
     align-self: self-start;
     margin-top: 5px;
 }
 
-.news-btn {
+.page__head--btn{
     display: flex;
     flex-wrap: wrap;
     margin-left: 50px;
 }
 
-.news-btn button {
+.page__head--btn button {
     margin: 5px;
     padding: 10px 15px;
     display: flex;
@@ -228,25 +228,25 @@
     align-items: center;
 }
 
-.news-btn button,
-.news-btn button span {
+.page__head--btn button,
+.page__head--btn button span {
     transition: all 0.3s ease;
 }
 
-.news-btn button svg path {
+.page__head--btn button svg path {
     transition: all 0.1s ease;
 }
 
-.news-btn button:hover,
-.news-btn button:hover span,
-.news-btn button:hover svg path {
+.page__head--btn button:hover,
+.page__head--btn button:hover span,
+.page__head--btn button:hover svg path {
     background-color: #eef2fe;
     border-radius: 15px;
     color: #96afe7;
     fill: #96afe7;
 }
 
-.news-btn button span {
+.page__head--btn button span {
     padding-top: 2px;
     padding-left: 10px;
     font-size: 14px;
@@ -307,60 +307,102 @@
     max-height: 300px;
 }
 
-.news-read .news__title{
+.news-read .news__title {
     font-size: 22px;
 }
 
-.news-read .news__text--all>*{
+.news-read .news__text--all>* {
     font-size: 18px;
 }
 
-.news-read .news__text--all{
+.news-read .news__text--all {
     margin: 20px 0;
 }
+
 /* ============================================================================= */
 
-.news-add__head{
+.news-add__head {
     display: flex;
     justify-content: space-between;
 }
 
-.news-add__form{
-    margin: 20px auto;
-    width: 80%;
-    background-color: #f0f0f8;
-    padding: 25px;
-    border-radius: 20px;
+.index-form-add {
+    padding: 5px 25px 25px;
+    margin: 0 auto;
+    background-color: #eef2fe;
+    border-radius: 25px;
+    max-width: 1000px;
 }
 
-.news-add__form>p{
-    margin: 10px 0;
+.index-form-add>p{
+    margin: 20px 0 10px;
 }
 
-.btn-form{
-    color: #fcfcfc;
-    font-weight: bold;
+.index-form-add button{
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #4bb34b;
     font-size: 16px;
-
-    padding: 10px 15px;
-    border-radius: 20px;
-    background-color: #699d75;
-    transition: background-color .4s linear;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: background-color 0.3s linear;
+	cursor: pointer;
 }
 
-.btn-form:hover{
+.index-form-add button:hover{
+    background-color: #48A348;
+}
+
+.index-form-add button{
+    float: right;
+}
+
+.input-file {
+	position: relative;
+	display: inline-block;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #5F5F60;
+    transition: background-color 0.3s linear;
+	cursor: pointer;
+}
+
+.input-file span {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	border: none;
+
+    margin: 5px;
+
+    color: #f1f1f1;
+    font-weight: bold;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+
+.input-file:hover{
     background-color: #6bbe66;
 }
+.input-file:active span {
+	background-color: #6bbe66;
+}
+ 
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
 
-
-
-
-
-
-
-
-
-
+.preview {
+    border-radius: 20px;
+    margin: 0 20px;
+}
 
 /* ============================================================================= */
 
@@ -389,7 +431,7 @@
         max-height: 200px;
     }
 
-    .news-read .news__item--control{
+    .news-read .news__item--control {
         margin: 0;
     }
 }

@@ -37,18 +37,13 @@ toggle.onclick = function () {
 
 var editors = [];
 
-$('.ewrapper').each(function (idx, wrapper) {
+$('.text-editor').each(function (idx, wrapper) {
     var e = new wysihtml.Editor($(wrapper).find('.editable').get(0), {
         toolbar: $(wrapper).find('.toolbar').get(0),
         parserRules: wysihtmlParserRules,
         stylesheets: "wysihtml/examples/css/stylesheet.css"
     });
     editors.push(e);
-});
-
-$('.input-file input[type=file]').on('change', function(){
-	let file = this.files[0];
-	$(this).next().html(file.name);
 });
 
 function previewFile() {

@@ -380,27 +380,15 @@ header .image-text .header-text {
     background-color: #ddd;
 }
 
-
-
-/* input[type="text"],
-textarea{
-    background-color: #f0f0f8;
-    padding: 10px 15px;
-    border-radius: 10px;
-    width: 100%;
-} */
-
 input[type="text"],
 textarea {
     -webkit-appearance: none;
     width: 100%;
-    /* height: calc(2.25rem + 2px); */
     padding: 0.375rem 0.75rem;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    /* color: #212529; */
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #bdbdbd;
@@ -410,13 +398,11 @@ textarea {
 
 input[type="text"]::placeholder,
 textarea::placeholder {
-    /* color: #212529; */
     opacity: 0.4;
 }
 
 input[type="text"]:focus,
 textarea:focus {
-    /* color: #212529; */
     background-color: #fff;
     border-color: #bdbdbd;
     outline: 0;
@@ -431,50 +417,22 @@ textarea[readonly] {
     opacity: 1;
 }
 
+[data-wysihtml-dialog] {
+    margin: 5px 0;
+    padding: 5px;
+}
 
-
-
-
-
-
-
-
-
-.input-file {
-	position: relative;
-	display: inline-block;
-    padding: 10px;
+[data-wysihtml-dialog] input{
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
     border-radius: 0.25rem;
-    background-color: #699d75;
-    transition: background-color 0.3s linear;
-	cursor: pointer;
 }
 
-.input-file span {
-	position: relative;
-	display: inline-block;
-	outline: none;
-	border: none;
-
-    margin: 5px;
-
-    color: #f1f1f1;
-    font-weight: bold;
-}
-.input-file input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
-}
-
-.input-file:hover{
-    background-color: #6bbe66;
-}
-
-.preview {
-    border-radius: 20px;
-    margin: 0 0 0 20px;
+[data-wysihtml-dialog]>a{
+    cursor: pointer;
+    color: #f7f7f9;
+    padding: 3px 5px;
+    border-radius: 6px;
+    background-color: #5F5F60;
 }
