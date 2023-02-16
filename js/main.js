@@ -50,3 +50,19 @@ $('.input-file input[type=file]').on('change', function(){
 	let file = this.files[0];
 	$(this).next().html(file.name);
 });
+
+function previewFile() {
+    var preview = document.querySelector('.preview');
+    var file = document.querySelector('input[type=file]').files[0];
+    var reader = new FileReader();
+
+    reader.onloadend = function () {
+        preview.src = reader.result;
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } else {
+        preview.src = "";
+    }
+}
