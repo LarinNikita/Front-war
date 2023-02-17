@@ -37,21 +37,20 @@
         <main class="main">
             <div class="container">
 
-                <div class="news-add">
-
-                    <div class="page__head">
+                <div class="page">
+                    <div class="page-head">
                         <div class="caption">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
-                                style="fill: #707070;">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#707070' width='24'
+                                height='24'>
+                                <path d="M13 7.037h-2V10H8.037v2H11v2.963h2V12h2.963v-2H13z"></path>
                                 <path
-                                    d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z">
+                                    d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z">
                                 </path>
-                                <path d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z"></path>
                             </svg>
-                            <h2>Добавить новость</h2>
+                            <h2>Добавить уведомление</h2>
                         </div>
-                        <div class="page__head--btn">
-                            <button onclick="location.href='news-all.html'">
+                        <div class="page-head--btns">
+                            <button onclick="location.href='page-notification-all.html'">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     style="fill: rgba(112, 112, 112, 1);">
                                     <path
@@ -62,98 +61,125 @@
                             </button>
                         </div>
                     </div>
+                    <div class="page-content">
 
-                    <form class="text-editor index-form-add">
+                        <form class="text-editor text-editor-news">
 
-                        <p><b>Название новости</b></p>
-                        <input type="text">
-
-                        <p><b>Содержание</b></p>
-                        <div class="toolbar" style="display: none;">
-
-                            <a data-wysihtml-command="bold" title="CTRL+B">
-                                <img src="img/icons/bx-bold.svg" alt="bold">
-                            </a>
-
-                            <a data-wysihtml-command="italic" title="CTRL+I">
-                                <img src="img/icons/bx-italic.svg" alt="italic">
-                            </a>
-
-                            <a data-wysihtml-command="createLink" title="Добавить ссылку">
-                                <img src="img/icons/bx-link.svg" alt="link">
-                            </a>
-                            <a data-wysihtml-command="removeLink" title="Убрать ссылку">
-                                <img src="img/icons/bx-unlink.svg" alt="unlink">
-                            </a>
-
-                            <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="h1" title="Заголовок">
-                                <img src="img/icons/bx-heading.svg" alt="heading">
-                            </a>
-                            <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="p" title="Абзац">
-                                <img src="img/icons/bx-paragraph.svg" alt="paragraph">
-                            </a>
-
-                            <a data-wysihtml-command="alignLeftStyle" title="Выровнить по левому краю">
-                                <img src="img/icons/bx-align-left.svg" alt="align-left">
-                            </a>
-                            <a data-wysihtml-command="alignCenterStyle" title="Выровнить по центру краю">
-                                <img src="img/icons/bx-align-middle.svg" alt="align-middle">
-                            </a>
-                            <a data-wysihtml-command="alignRightStyle" title="Выровнить по правому краю">
-                                <img src="img/icons/bx-align-right.svg" alt="align-right">
-                            </a>
-
-                            <a data-wysihtml-command="foreColor" data-wysihtml-command-value="red" title="Красный цвет">
-                                <img src="img/icons/red-circle-icon.svg" alt="red">
-                            </a>
-                            <a data-wysihtml-command="foreColor" data-wysihtml-command-value="green"
-                                title="Зеленый цвет">
-                                <img src="img/icons/green-circle-icon.svg" alt="green">
-                            </a>
-                            <a data-wysihtml-command="foreColor" data-wysihtml-command-value="blue" title="Синий цвет">
-                                <img src="img/icons/blue-circle-icon.svg" alt="blue">
-                            </a>
-
-                            <a data-wysihtml-command="insertUnorderedList" title="Маркерованный списк">
-                                <img src="img/icons/bx-list-ul.svg" alt="list-ul">
-                            </a>
-                            <a data-wysihtml-command="insertOrderedList" title="Нумерованный списк">
-                                <img src="img/icons/bx-list-ol.svg" alt="list-ol">
-                            </a>
-
-                            <a data-wysihtml-command="undo" title="Отменить ввод">
-                                <img src="img/icons/bx-undo.svg" alt="undo">
-                            </a>
-                            <a data-wysihtml-command="redo" title="Вернуть ввод">
-                                <img src="img/icons/bx-redo.svg" alt="redo">
-                            </a>
-
-                            <a data-wysihtml-action="change_view">
-                                <img src="img/icons/bx-code-alt.svg" alt="code">
-                            </a>
-
-
-                            <div data-wysihtml-dialog="createLink" style="display: none;">
-                                <label>Link:<input data-wysihtml-dialog-field="href"></label>
-                                <a data-wysihtml-dialog-action="save">OK</a>&nbsp;<a
-                                    data-wysihtml-dialog-action="cancel">Cancel</a>
+                            <p><b>Цвет фона уведомления</b></p>
+                            <div class="bg-chose">
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-green">
+                                    <label class="radio-label" for="bg-green">Зеленый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-red">
+                                    <label class="radio-label" for="bg-red">Красный</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-yellow">
+                                    <label class="radio-label" for="bg-yellow">Жёлтый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-blue">
+                                    <label class="radio-label" for="bg-blue">Голубой</label>
+                                </div>
                             </div>
 
-                        </div>
-                        <textarea class="editable"></textarea>
+                            <p><b>Заголовок уведомления</b></p>
+                            <input type="text">
 
-                        <p><b>Изображение для новости</b></p>
-                        <label class="input-file">
-                            <input type="file" name="file" onchange="previewFile()">
-                            <img src="img/icons/bx-download.svg" alt="download">
-                            <span>Выберите файл</span>
-                        </label>
-                        <img class="preview" src="" height="200" alt="">
+                            <p><b>Содержание</b></p>
+                            <div class="toolbar" style="display: none;">
 
-                        <button type="submit">Опубликовать</button>
+                                <a data-wysihtml-command="bold" title="CTRL+B">
+                                    <img src="img/icons/bx-bold.svg" alt="bold">
+                                </a>
 
-                    </form>
+                                <a data-wysihtml-command="italic" title="CTRL+I">
+                                    <img src="img/icons/bx-italic.svg" alt="italic">
+                                </a>
 
+                                <a data-wysihtml-command="createLink" title="Добавить ссылку">
+                                    <img src="img/icons/bx-link.svg" alt="link">
+                                </a>
+                                <a data-wysihtml-command="removeLink" title="Убрать ссылку">
+                                    <img src="img/icons/bx-unlink.svg" alt="unlink">
+                                </a>
+
+                                <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="h1"
+                                    title="Заголовок">
+                                    <img src="img/icons/bx-heading.svg" alt="heading">
+                                </a>
+                                <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="p" title="Абзац">
+                                    <img src="img/icons/bx-paragraph.svg" alt="paragraph">
+                                </a>
+
+                                <a data-wysihtml-command="alignLeftStyle" title="Выровнить по левому краю">
+                                    <img src="img/icons/bx-align-left.svg" alt="align-left">
+                                </a>
+                                <a data-wysihtml-command="alignCenterStyle" title="Выровнить по центру краю">
+                                    <img src="img/icons/bx-align-middle.svg" alt="align-middle">
+                                </a>
+                                <a data-wysihtml-command="alignRightStyle" title="Выровнить по правому краю">
+                                    <img src="img/icons/bx-align-right.svg" alt="align-right">
+                                </a>
+
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="red"
+                                    title="Красный цвет">
+                                    <img src="img/icons/red-circle-icon.svg" alt="red">
+                                </a>
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="green"
+                                    title="Зеленый цвет">
+                                    <img src="img/icons/green-circle-icon.svg" alt="green">
+                                </a>
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="blue"
+                                    title="Синий цвет">
+                                    <img src="img/icons/blue-circle-icon.svg" alt="blue">
+                                </a>
+
+                                <a data-wysihtml-command="insertUnorderedList" title="Маркерованный списк">
+                                    <img src="img/icons/bx-list-ul.svg" alt="list-ul">
+                                </a>
+                                <a data-wysihtml-command="insertOrderedList" title="Нумерованный списк">
+                                    <img src="img/icons/bx-list-ol.svg" alt="list-ol">
+                                </a>
+
+                                <a data-wysihtml-command="undo" title="Отменить ввод">
+                                    <img src="img/icons/bx-undo.svg" alt="undo">
+                                </a>
+                                <a data-wysihtml-command="redo" title="Вернуть ввод">
+                                    <img src="img/icons/bx-redo.svg" alt="redo">
+                                </a>
+
+                                <a data-wysihtml-action="change_view">
+                                    <img src="img/icons/bx-code-alt.svg" alt="code">
+                                </a>
+
+
+                                <div data-wysihtml-dialog="createLink" style="display: none;">
+                                    <label>Link:<input data-wysihtml-dialog-field="href"></label>
+                                    <a data-wysihtml-dialog-action="save">OK</a>&nbsp;<a
+                                        data-wysihtml-dialog-action="cancel">Cancel</a>
+                                </div>
+
+                            </div>
+                            <textarea class="editable"></textarea>
+
+                            <p><b>Изображение для уведомления</b></p>
+                            <label class="input-file">
+                                <input type="file" name="file" onchange="previewFile()">
+                                <img src="img/icons/bx-download.svg" alt="download">
+                                <span>Выберите файл</span>
+                            </label>
+                            <img class="preview" src="" height="200" alt="">
+
+                            <button type="submit">Опубликовать</button>
+
+                        </form>
+
+                    </div>
+                    <div class="page-bottom">
+                    </div>
                 </div>
 
             </div>
@@ -255,7 +281,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a class="active" href="#">
+                        <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 style="fill: rgba(0, 0, 0, 1);" class="icon">
                                 <path
@@ -393,7 +419,6 @@
         <p>Ларин Никита Мараттович</p>
         <p>IP: 10.42.136.97</p>
     </div>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="wysihtml/dist/wysihtml.js"></script>
     <script src="wysihtml/dist/wysihtml.all-commands.js"></script>
