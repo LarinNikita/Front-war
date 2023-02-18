@@ -19,9 +19,40 @@
                 <img class="header__img" src="img/logo.png" alt="logo">
                 <h1 class="header__title">Филиал ППК Роскадастр по Кемеровской области - Кузбассу</h1>
             </div>
-            <div class="user-ip">
+            <div class="user-ip" style="display: none;">
                 <p>Ларин Никита Маратович</p>
                 <p>IP: 10.42.136.97</p>
+            </div>
+            <div id="mainButton">
+                <button class="login-btn" onclick="openForm()">Авторизация</button>
+                <div class="modal">
+                    <button class="closeLoginForm" onclick="closeForm()">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
+                        </svg>
+                    </button>
+                    <h2 class="form-title">Авторизация</h2>
+                    <div class="input-group">
+                        <label for="user-name">Логин</label>
+                        <input type="text" id="user-name" placeholder="Введите логин">
+                    </div>
+                    <div class="input-group">
+                        <label for="user-password">Пароль</label>
+                        <input type="password" id="password-input" placeholder="Введите пароль" name="password">
+                        <spam class="password-control" onclick="return show_hide_password(this);"></spam>
+                    </div>
+                    <button class="form-button" onclick="closeForm()">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="m13 16 5-4-5-4v3H4v2h9z" />
+                            <path
+                                d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
+                        </svg>
+                        <span>Войти</span>
+                    </button>
+                </div>
             </div>
         </header>
         <nav class="tabs">
@@ -36,29 +67,6 @@
         </nav>
         <main class="main">
             <div class="container">
-
-                <section class="notification">
-
-                    <div class="notification-img">
-                        <img src="img/warning.svg" alt="">
-                    </div>
-                    <div class="notification-content">
-                        <h2>Notification title</h2>
-                        <div class="notification-text">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, nulla nisi. Est
-                                cupiditate, fugiat quisquam obcaecati eaque fugit debitis. Debitis, excepturi facilis
-                                inventore reprehenderit suscipit itaque ea laboriosam totam, iste facere dolorum
-                                accusantium aut. Provident tenetur reprehenderit quaerat delectus pariatur, aliquid,
-                                doloremque soluta velit qui vel asperiores maiores. Obcaecati, numquam consequuntur?
-                                Laborum totam officia veritatis tempora voluptatem, laudantium consectetur deleniti!
-                            </p>
-                        </div>
-                        <div class="notification-date">
-                            <p>30.02.2077</p>
-                        </div>
-                    </div>
-
-                </section>
 
                 <div class="main-page">
                     <section class="servers">
@@ -453,7 +461,7 @@
                         <span class="text nav-text server">FTP-сервер</span>
                     </a>
                 </li>
-                <li class="">
+                <li class="" style="display: none;">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgba(0, 0, 0, 1);" class="icon">
@@ -463,6 +471,17 @@
                             </path>
                         </svg>
                         <span class="text nav-text">Выход</span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:707070" width="24" height="24"
+                            viewBox="0 0 24 24" class="icon">
+                            <path d="m13 16 5-4-5-4v3H4v2h9z" />
+                            <path
+                                d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
+                        </svg>
+                        <span class="text nav-text">Войти</span>
                     </a>
                 </li>
             </div>
