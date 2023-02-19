@@ -42,7 +42,6 @@
     background-color: #f0f0f8;
     border-radius: 20px;
     padding: 10px;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -162,7 +161,6 @@
     margin: 10px 10px 10px 0;
     background-color: #fcfcfc;
     border-radius: 20px;
-    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -257,7 +255,6 @@
 
 .page-content {
     margin: 20px auto;
-    border: 1px solid #000;
 }
 
 .page-bottom {
@@ -389,29 +386,127 @@
 /* ============================================================================= */
 
 .notification {
-    max-width: 1000px;
-    margin: 0 auto;
-    /* padding: 15px; */
-    background-color: #d4edda;
-    /* border-radius: 25px; */
+    display: flex;
+    border-radius: 25px;
+    margin: 0 0 25px;
+    margin-top: 15px;
+}
+
+
+.notification-green {
+    background-color: #c3e6cb;
+}
+
+.notification-green svg path {
+    fill: #155724;
+}
+
+.notification-red {
+    background-color: #f5c6cb;
+}
+
+.notification-red svg path {
+    fill: #721c24;
+}
+
+.notification-yellow {
+    background-color: #ffeeba;
+}
+
+.notification-yellow svg path {
+    fill: #856404;
+}
+
+.notification-blue {
+    background-color: #b8daff;
+}
+
+.notification-blue svg path {
+    fill: #004085;
+}
+
+
+.notification-icon {
+    background-color: rgba(0, 0, 0, .1);
+
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
 
     display: flex;
+    align-items: center;
+    min-width: 84px;
 }
 
-.notification-img {
-    align-self: center;
-    background-color: tomato;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.notification-icon svg {
+    margin: 0 10px;
+    max-width: 64px;
+    max-height: 64px;
 }
 
-.notification-content {}
+.notification-body {
+    text-align: center;
+    padding: 15px;
+}
 
-.notification-text {}
+.notification-body__title {
+    margin-bottom: 15px;
+}
 
-.notification-date {}
+.notification-body__text {
+    line-height: 1.5;
+}
 
 /* ============================================================================= */
+
+.page-all-notifications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.page-all-notifications .notification {
+    max-width: 500px;
+    max-height: 300px;
+    margin: 20px;
+
+    overflow: hidden;
+}
+.page-all-notifications .notification-icon {
+    min-width: 60px;
+}
+
+.page-all-notifications .notification-icon svg {
+    margin: 0 10px;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.page-all-notifications .notification-control {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: 0 10px;
+}
+
+.page-all-notifications .notification-control a {
+    margin: 10px 0;
+}
+
+.notification-control a svg path {
+    transition: all 0.3s ease;
+}
+
+.notification-control a:nth-child(1):hover svg path {
+    fill: gold;
+}
+
+.notification-control a:nth-child(2):hover svg path {
+    fill: tomato;
+}
+
+.notification-control a:nth-child(3):hover svg path {
+    fill: slateblue;
+}
 
 /* ============================================================================= */
 
