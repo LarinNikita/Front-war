@@ -19,53 +19,14 @@
                 <img class="header__img" src="img/logo.png" alt="logo">
                 <h1 class="header__title">Филиал ППК Роскадастр по Кемеровской области - Кузбассу</h1>
             </div>
-            <div class="user-ip" style="display: none;">
+            <div class="user-ip">
                 <p>Ларин Никита Маратович</p>
                 <p>IP: 10.42.136.97</p>
-            </div>
-            <div id="loginForm">
-                <button class="user-login__btn" onclick="openLoginForm()">Авторизация</button>
-                <section class="login">
-                    <form class="login-form">
-        
-                        <button class="login-close" onclick="closeLoginForm()">
-                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
-                            </svg>
-                        </button>
-        
-                        <h2 class="login-title">Авторизация</h2>
-        
-                        <div class="input-group">
-                            <label for="user-name">Логин</label>
-                            <input type="text" id="user-name" placeholder="Введите логин">
-                        </div>
-        
-                        <div class="input-group">
-                            <label for="user-password">Пароль</label>
-                            <input type="password" id="password-input" placeholder="Введите пароль" name="password">
-                            <spam class="password-control" onclick="return show_hide_password(this);"></spam>
-                        </div>
-        
-                        <button class="login-btn" onclick="closeLoginForm()">
-                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
-                                viewBox="0 0 24 24">
-                                <path d="m13 16 5-4-5-4v3H4v2h9z" />
-                                <path
-                                    d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
-                            </svg>
-                            <span>Войти</span>
-                        </button>
-        
-                    </form>
-                </section>
             </div>
         </header>
         <nav class="tabs">
             <ul class="container">
-                <li><a class="active" href="index.html">Главная</a></li>
+                <li><a href="index.html">Главная</a></li>
                 <li><a href="#">Справочник</a></li>
                 <li><a href="#">Техподдержка</a></li>
                 <li><a href="#">Тестирование</a></li>
@@ -76,185 +37,149 @@
         <main class="main">
             <div class="container">
 
-                <div class="main-page">
-                    <section class="servers">
-                        <div class="servers-grup">
-                            <div class="caption">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
-                                    style="fill: #707070;">
-                                    <path
-                                        d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z">
-                                    </path>
-                                    <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
-                                </svg>
-                                <h2>Промышленные сервера УИС КН</h2>
-                            </div>
-                            <nav class="servers__list">
-                                <ol>
-                                    <li><a href="#">Сервер приложений АИС ГКН в домене R42</a></li>
-                                    <li><a href="#">Сервер приложений АИС ГКН в домене FKP42</a></li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div class="servers-grup">
-                            <div class="caption">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
-                                    style="fill: #707070;">
-                                    <path
-                                        d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z">
-                                    </path>
-                                    <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
-                                </svg>
-                                <h2>Промышленный контур</h2>
-                            </div>
-                            <nav class="servers__list">
-                                <ol>
-                                    <li>
-                                        <a href="#">ПКУРП</a>
-                                        <p>Подсистема предназначена для осуществления кадастрового учета и
-                                            регистрации прав</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">ППОЗ</a>
-                                        <p>Подсистема предназначена для просмотра книг КУВД и КУВИ, поступивших
-                                            обращений, а так же мониторинга и формирования оперативных отчетов</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">ПК ПВД 3</a>
-                                        <p>Программный комплекс приема-выдачи документов</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">СИА</a>
-                                        <p>Подсистема предназначена для ведения учетных данных пользователей</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">Реестр границ</a>
-                                        <p>Подсистема предназначена для ведения реестра границ</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">Кадастровое деление</a>
-                                        <p>Подсистема предназначена для ведения кадастрового деления</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">Картографическая основа</a>
-                                        <p>Подсистема предназначена для ведения картографической основы</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">ПСКО</a>
-                                        <p>Подсистема сопровождения кадастровой оценки</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">ПОКД</a>
-                                        <p>Подсистема обеспечения качества данных</p>
-                                    </li>
-                                    <li>
-                                        <a href="#">ИС Архив</a>
-                                        <p>Информационная система управления архивом</p>
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                        <div class="servers-grup">
-                            <div class="caption">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
-                                    style="fill: #707070;">
-                                    <path
-                                        d="M20 3H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zM4 9V5h16v4zm16 4H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2zM4 19v-4h16v4z">
-                                    </path>
-                                    <path d="M17 6h2v2h-2zm-3 0h2v2h-2zm3 10h2v2h-2zm-3 0h2v2h-2z"></path>
-                                </svg>
-                                <h2>Тестовые сервера ФГИС ЕГРН</h2>
-                            </div>
-                            <nav class="servers__list">
-                                <ol>
-                                    <li><a href="#">ППОЗ Подсистема приема и обработки запросов</a></li>
-                                    <li><a href="#">Подсистема кадастрового учета и регистрации прав</a></li>
-                                    <li><a href="#">АРМ ведения реестра границ</a></li>
-                                    <li><a href="#">АРМ ведения картографической и геодезической основы</a></li>
-                                    <li><a href="#">АРМ кадастрового деления</a></li>
-                                    <li><a href="#">ПК ПВД</a></li>
-                                    <li><a href="#">ПК ПВД для МФЦ</a></li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </section>
-                    <section class="news">
+                <div class="page">
+                    <div class="page-head">
                         <div class="caption">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 24 24"
-                                style="fill: #707070;">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#707070' width='24'
+                                height='24'>
+                                <path d="M13 7.037h-2V10H8.037v2H11v2.963h2V12h2.963v-2H13z"></path>
                                 <path
-                                    d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z">
+                                    d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z">
                                 </path>
-                                <path d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z"></path>
                             </svg>
-                            <h2>Новости</h2>
+                            <h2>Добавить уведомление</h2>
                         </div>
-                        <div class="news__list">
-                            <div class="news__item news-hover">
-                                <div class="news__item--img">
-                                    <img src="img/ico.png" alt="">
+                        <div class="page-head--btns">
+                            <button onclick="location.href='page-notification-all.html'">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    style="fill: rgba(112, 112, 112, 1);">
+                                    <path
+                                        d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z">
+                                    </path>
+                                </svg>
+                                <span>Назад</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="page-content">
+
+                        <form class="text-editor text-editor-news">
+
+                            <p><b>Цвет фона уведомления</b></p>
+                            <div class="bg-chose">
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-green">
+                                    <label class="radio-label" for="bg-green">Зеленый</label>
                                 </div>
-                                <div class="news__item--content">
-                                    <h3 class="news__title">News title test</h3>
-                                    <div class="news__text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam
-                                            ratione veniam illo nesciunt, magni consectetur distinctio culpa nam cumque
-                                            laboriosam neque expedita! Optio tempore quod delectus numquam explicabo
-                                            libero consequatur sequi possimus. Officia placeat, doloremque commodi
-                                            ratione quos obcaecati.
-                                        </p>
-                                    </div>
-                                    <div class="news__bottom">
-                                        <a class="news__bottom--btn" href="page-news.html">Читать далее</a>
-                                        <span class="news__bottom--date">29.02.2007</span>
-                                    </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-red">
+                                    <label class="radio-label" for="bg-red">Красный</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-yellow">
+                                    <label class="radio-label" for="bg-yellow">Жёлтый</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" name="radio" id="bg-blue">
+                                    <label class="radio-label" for="bg-blue">Голубой</label>
                                 </div>
                             </div>
-                            <div class="news__item news-hover">
-                                <div class="news__item--img">
-                                    <img src="img/ico.png" alt="">
+
+                            <p><b>Заголовок уведомления</b></p>
+                            <input type="text">
+
+                            <p><b>Содержание</b></p>
+                            <div class="toolbar" style="display: none;">
+
+                                <a data-wysihtml-command="bold" title="CTRL+B">
+                                    <img src="img/icons/bx-bold.svg" alt="bold">
+                                </a>
+
+                                <a data-wysihtml-command="italic" title="CTRL+I">
+                                    <img src="img/icons/bx-italic.svg" alt="italic">
+                                </a>
+
+                                <a data-wysihtml-command="createLink" title="Добавить ссылку">
+                                    <img src="img/icons/bx-link.svg" alt="link">
+                                </a>
+                                <a data-wysihtml-command="removeLink" title="Убрать ссылку">
+                                    <img src="img/icons/bx-unlink.svg" alt="unlink">
+                                </a>
+
+                                <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="h1"
+                                    title="Заголовок">
+                                    <img src="img/icons/bx-heading.svg" alt="heading">
+                                </a>
+                                <a data-wysihtml-command="formatBlock" data-wysihtml-command-value="p" title="Абзац">
+                                    <img src="img/icons/bx-paragraph.svg" alt="paragraph">
+                                </a>
+
+                                <a data-wysihtml-command="alignLeftStyle" title="Выровнить по левому краю">
+                                    <img src="img/icons/bx-align-left.svg" alt="align-left">
+                                </a>
+                                <a data-wysihtml-command="alignCenterStyle" title="Выровнить по центру краю">
+                                    <img src="img/icons/bx-align-middle.svg" alt="align-middle">
+                                </a>
+                                <a data-wysihtml-command="alignRightStyle" title="Выровнить по правому краю">
+                                    <img src="img/icons/bx-align-right.svg" alt="align-right">
+                                </a>
+
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="red"
+                                    title="Красный цвет">
+                                    <img src="img/icons/red-circle-icon.svg" alt="red">
+                                </a>
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="green"
+                                    title="Зеленый цвет">
+                                    <img src="img/icons/green-circle-icon.svg" alt="green">
+                                </a>
+                                <a data-wysihtml-command="foreColor" data-wysihtml-command-value="blue"
+                                    title="Синий цвет">
+                                    <img src="img/icons/blue-circle-icon.svg" alt="blue">
+                                </a>
+
+                                <a data-wysihtml-command="insertUnorderedList" title="Маркерованный списк">
+                                    <img src="img/icons/bx-list-ul.svg" alt="list-ul">
+                                </a>
+                                <a data-wysihtml-command="insertOrderedList" title="Нумерованный списк">
+                                    <img src="img/icons/bx-list-ol.svg" alt="list-ol">
+                                </a>
+
+                                <a data-wysihtml-command="undo" title="Отменить ввод">
+                                    <img src="img/icons/bx-undo.svg" alt="undo">
+                                </a>
+                                <a data-wysihtml-command="redo" title="Вернуть ввод">
+                                    <img src="img/icons/bx-redo.svg" alt="redo">
+                                </a>
+
+                                <a data-wysihtml-action="change_view">
+                                    <img src="img/icons/bx-code-alt.svg" alt="code">
+                                </a>
+
+
+                                <div data-wysihtml-dialog="createLink" style="display: none;">
+                                    <label>Link:<input data-wysihtml-dialog-field="href"></label>
+                                    <a data-wysihtml-dialog-action="save">OK</a>&nbsp;<a
+                                        data-wysihtml-dialog-action="cancel">Cancel</a>
                                 </div>
-                                <div class="news__item--content">
-                                    <h3 class="news__title">News title test</h3>
-                                    <div class="news__text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam
-                                            ratione veniam illo nesciunt, magni consectetur distinctio culpa nam cumque
-                                            laboriosam neque expedita! Optio tempore quod delectus numquam explicabo
-                                            libero consequatur sequi possimus. Officia placeat, doloremque commodi
-                                            ratione quos obcaecati.
-                                        </p>
-                                    </div>
-                                    <div class="news__bottom">
-                                        <a class="news__bottom--btn" href="#">Читать далее</a>
-                                        <span class="news__bottom--date">29.02.2007</span>
-                                    </div>
-                                </div>
+
                             </div>
-                            <div class="news__item news-hover">
-                                <div class="news__item--img">
-                                    <img src="img/ico.png" alt="">
-                                </div>
-                                <div class="news__item--content">
-                                    <h3 class="news__title">News title test</h3>
-                                    <div class="news__text">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti totam
-                                            ratione veniam illo nesciunt, magni consectetur distinctio culpa nam cumque
-                                            laboriosam neque expedita! Optio tempore quod delectus numquam explicabo
-                                            libero consequatur sequi possimus. Officia placeat, doloremque commodi
-                                            ratione quos obcaecati.
-                                        </p>
-                                    </div>
-                                    <div class="news__bottom">
-                                        <a class="news__bottom--btn" href="#">Читать далее</a>
-                                        <span class="news__bottom--date">29.02.2007</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="news-all">
-                            <a href="page-news-all.html">Все новости</a>
-                        </div>
-                    </section>
+                            <textarea class="editable"></textarea>
+
+                            <p><b>Изображение для уведомления</b></p>
+                            <label class="input-file">
+                                <input type="file" name="file" onchange="previewFile()">
+                                <img src="img/icons/bx-download.svg" alt="download">
+                                <span>Выберите файл</span>
+                            </label>
+                            <img class="preview" src="" height="200" alt="">
+
+                            <button type="submit">Опубликовать</button>
+
+                        </form>
+
+                    </div>
+                    <div class="page-bottom">
+                    </div>
                 </div>
 
             </div>
@@ -272,10 +197,10 @@
                     <img src="img/ico.png" alt="logo">
                 </span>
 
-                <!-- <div class="text header-text">
+                <div class="text header-text">
                     <span class="name">Ларин Никита Маратович</span>
                     <span class="subname">IP: 10.42.136.97</span>
-                </div> -->
+                </div>
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -356,7 +281,7 @@
                         </a>
                     </li>
                     <li class="nav-link">
-                        <a href="page-news-all.html">
+                        <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 style="fill: rgba(0, 0, 0, 1);" class="icon">
                                 <path
@@ -469,7 +394,7 @@
                         <span class="text nav-text server">FTP-сервер</span>
                     </a>
                 </li>
-                <li class="" style="display: none;">
+                <li class="">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgba(0, 0, 0, 1);" class="icon">
@@ -481,17 +406,6 @@
                         <span class="text nav-text">Выход</span>
                     </a>
                 </li>
-                <li class="">
-                    <a href="#" onclick="openLoginForm()">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:707070" width="24" height="24"
-                            viewBox="0 0 24 24" class="icon">
-                            <path d="m13 16 5-4-5-4v3H4v2h9z" />
-                            <path
-                                d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
-                        </svg>
-                        <span class="text nav-text">Войти</span>
-                    </a>
-                </li>
             </div>
         </div>
     </nav>
@@ -501,10 +415,16 @@
             <path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
         </svg>
     </button>
-    <!-- <div id="ip-show">
+    <div id="ip-show">
         <p>Ларин Никита Мараттович</p>
         <p>IP: 10.42.136.97</p>
-    </div> -->
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="wysihtml/dist/wysihtml.js"></script>
+    <script src="wysihtml/dist/wysihtml.all-commands.js"></script>
+    <script src="wysihtml/dist/wysihtml.table_editing.js"></script>
+    <script src="wysihtml/dist/wysihtml.toolbar.js"></script>
+    <script src="wysihtml/parser_rules/advanced_unwrap.js"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -46,7 +46,7 @@
     transition: all 0.3s ease;
 }
 
-.news__item:hover {
+.news-hover:hover {
     box-shadow: 1px 1px #699d75,
         2px 2px #699d75,
         3px 3px #699d75,
@@ -204,23 +204,24 @@
 
 /* ============================================================================= */
 
-.news-page__head {
+/* .page {} */
+
+.page-head {
     display: flex;
     justify-content: space-between;
 }
 
-.news-page__head .caption {
+.caption {
     align-self: self-start;
     margin-top: 5px;
 }
 
-.news-btn {
+.page-head--btns {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 50px;
 }
 
-.news-btn button {
+.page-head--btns button {
     margin: 5px;
     padding: 10px 15px;
     display: flex;
@@ -228,25 +229,25 @@
     align-items: center;
 }
 
-.news-btn button,
-.news-btn button span {
+.page-head--btns button,
+.page-head--btns button span {
     transition: all 0.3s ease;
 }
 
-.news-btn button svg path {
+.page-head--btns button svg path {
     transition: all 0.1s ease;
 }
 
-.news-btn button:hover,
-.news-btn button:hover span,
-.news-btn button:hover svg path {
+.page-head--btns button:hover,
+.page-head--btns button:hover span,
+.page-head--btns button:hover svg path {
     background-color: #eef2fe;
     border-radius: 15px;
     color: #96afe7;
     fill: #96afe7;
 }
 
-.news-btn button span {
+.page-head--btns button span {
     padding-top: 2px;
     padding-left: 10px;
     font-size: 14px;
@@ -254,31 +255,30 @@
     white-space: nowrap;
 }
 
-.news-page__main {
-    margin: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.page-content {
+    margin: 20px auto;
+    border: 1px solid #000;
 }
 
-.news-page__main .news__item {
-    margin: 10px;
-    max-width: 500px;
-}
-
-.news-page__bottom {
+.page-bottom {
     text-align: center;
 }
 
 /* ============================================================================= */
 
-.news__item--control {
-    margin-left: 10px;
+.page-all-news {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.news__item--control a {
-    display: inline-block;
-    padding: 5px 0;
+.page-all-news .news__item {
+    margin: 20px;
+    max-width: 500px;
+}
+
+.news__item--control {
+    margin-left: 10px;
 }
 
 .news__item--control a svg path {
@@ -294,76 +294,128 @@
 }
 
 /* ============================================================================= */
-.news-read .news__item {
-    box-shadow: 0px 0px #699d75;
-    transform: translateX(0px);
-}
 
-.news-read .news__item--img {
+.page-news .news__item .news__item--img {
     margin-right: 20px;
 }
 
-.news-read .news__item--img img {
+.page-news .news__item .news__item--img img {
     max-height: 300px;
 }
 
-.news-read .news__title{
-    font-size: 22px;
+.page-news .news__item .news__title {
+    font-size: 25px;
 }
 
-.news-read .news__text--all>*{
-    font-size: 18px;
-}
-
-.news-read .news__text--all{
+.page-news .news__item .news__text--all {
     margin: 20px 0;
 }
+
+.page-news .news__item .news__text--all>* {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.page-news .news__item--content {
+    position: relative;
+}
+
+.page-news .news__item .news__bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 /* ============================================================================= */
 
-.news-add__head{
-    display: flex;
-    justify-content: space-between;
+.text-editor-news {
+    padding: 5px 25px 25px;
+    margin: 0 auto;
+    background-color: #eef2fe;
+    border-radius: 25px;
+    max-width: 1000px;
 }
 
-.news-add__form{
-    margin: 20px auto;
-    width: 80%;
-    background-color: #f0f0f8;
-    padding: 25px;
-    border-radius: 20px;
+.text-editor-news p {
+    margin: 20px 0 10px;
 }
 
-.news-add__form>p{
-    margin: 10px 0;
-}
-
-.btn-form{
-    color: #fcfcfc;
-    font-weight: bold;
+.text-editor-news button {
+    float: right;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #4bb34b;
     font-size: 16px;
-
-    padding: 10px 15px;
-    border-radius: 20px;
-    background-color: #699d75;
-    transition: background-color .4s linear;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
 }
 
-.btn-form:hover{
-    background-color: #6bbe66;
+.text-editor-news button:hover {
+    background-color: #48A348;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ============================================================================= */
 
+.bg-chose {
+    display: flex;
+}
+
+.radio {
+    margin: 0.5rem;
+}
+
+#bg-green:checked+.radio-label:before {
+    background-color: limegreen;
+    border-color: limegreen;
+}
+
+#bg-red:checked+.radio-label:before {
+    background-color: tomato;
+    border-color: tomato;
+}
+
+#bg-yellow:checked+.radio-label:before {
+    background-color: gold;
+    border-color: gold;
+}
+
+#bg-blue:checked+.radio-label:before {
+    background-color: #004085;
+    border-color: #004085;
+}
+
+/* ============================================================================= */
+
+.notification {
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 15px; */
+    background-color: #d4edda;
+    /* border-radius: 25px; */
+
+    display: flex;
+}
+
+.notification-img {
+    align-self: center;
+    background-color: tomato;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.notification-content {}
+
+.notification-text {}
+
+.notification-date {}
+
+/* ============================================================================= */
+
+/* ============================================================================= */
+
+/* ============================================================================= */
 @media all and (max-width: 900px) {
     .main-page {
         flex-direction: column;
@@ -376,20 +428,16 @@
 }
 
 @media all and (max-width: 840px) {
-    .news-read .news__item {
+    .page-news .news__item {
         flex-direction: column;
     }
 
-    .news-read .news__item--img {
+    .page-news .news__item--img {
         margin: 0 0 20px;
         text-align: center;
     }
 
-    .news-read .news__item--img img {
+    .page-news .news__item--img img {
         max-height: 200px;
-    }
-
-    .news-read .news__item--control{
-        margin: 0;
     }
 }

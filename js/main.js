@@ -35,20 +35,55 @@ toggle.onclick = function () {
     sidebar.classList.toggle("close");
 };
 
+var button = document.getElementById('loginForm');
+
+var openLoginForm = function() {
+	button.className = 'active';
+    body.style.overflow = "hidden";
+};
+
+var checkInput = function(input) {
+	if (input.value.length > 0) {
+		input.className = 'active';
+        body.style.overflow = "hidden";
+	} else {
+		input.className = '';
+        body.style.overflow = "auto";
+	}
+};
+
+var closeLoginForm = function() {
+	button.className = '';
+    body.style.overflow = "auto";
+};
+
+document.addEventListener("keyup", function(e) {
+	if (e.keyCode == 27 || e.keyCode == 13) {
+		closeForm();
+	}
+});
+
+function show_hide_password(target){
+	var input = document.getElementById('password-input');
+	if (input.getAttribute('type') == 'password') {
+		target.classList.add('view');
+		input.setAttribute('type', 'text');
+	} else {
+		target.classList.remove('view');
+		input.setAttribute('type', 'password');
+	}
+	return false;
+}
+
 var editors = [];
 
-$('.ewrapper').each(function (idx, wrapper) {
+$('.text-editor').each(function (idx, wrapper) {
     var e = new wysihtml.Editor($(wrapper).find('.editable').get(0), {
         toolbar: $(wrapper).find('.toolbar').get(0),
         parserRules: wysihtmlParserRules,
         stylesheets: "wysihtml/examples/css/stylesheet.css"
     });
     editors.push(e);
-});
-
-$('.input-file input[type=file]').on('change', function(){
-	let file = this.files[0];
-	$(this).next().html(file.name);
 });
 
 function previewFile() {
