@@ -23,36 +23,44 @@
                 <p>Ларин Никита Маратович</p>
                 <p>IP: 10.42.136.97</p>
             </div>
-            <div id="mainButton">
-                <button class="login-btn" onclick="openForm()">Авторизация</button>
-                <div class="modal">
-                    <button class="closeLoginForm" onclick="closeForm()">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
-                            viewBox="0 0 24 24">
-                            <path
-                                d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
-                        </svg>
-                    </button>
-                    <h2 class="form-title">Авторизация</h2>
-                    <div class="input-group">
-                        <label for="user-name">Логин</label>
-                        <input type="text" id="user-name" placeholder="Введите логин">
-                    </div>
-                    <div class="input-group">
-                        <label for="user-password">Пароль</label>
-                        <input type="password" id="password-input" placeholder="Введите пароль" name="password">
-                        <spam class="password-control" onclick="return show_hide_password(this);"></spam>
-                    </div>
-                    <button class="form-button" onclick="closeForm()">
-                        <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
-                            viewBox="0 0 24 24">
-                            <path d="m13 16 5-4-5-4v3H4v2h9z" />
-                            <path
-                                d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
-                        </svg>
-                        <span>Войти</span>
-                    </button>
-                </div>
+            <div id="loginForm">
+                <button class="user-login__btn" onclick="openLoginForm()">Авторизация</button>
+                <section class="login">
+                    <form class="login-form">
+        
+                        <button class="login-close" onclick="closeLoginForm()">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z" />
+                            </svg>
+                        </button>
+        
+                        <h2 class="login-title">Авторизация</h2>
+        
+                        <div class="input-group">
+                            <label for="user-name">Логин</label>
+                            <input type="text" id="user-name" placeholder="Введите логин">
+                        </div>
+        
+                        <div class="input-group">
+                            <label for="user-password">Пароль</label>
+                            <input type="password" id="password-input" placeholder="Введите пароль" name="password">
+                            <spam class="password-control" onclick="return show_hide_password(this);"></spam>
+                        </div>
+        
+                        <button class="login-btn" onclick="closeLoginForm()">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="m13 16 5-4-5-4v3H4v2h9z" />
+                                <path
+                                    d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z" />
+                            </svg>
+                            <span>Войти</span>
+                        </button>
+        
+                    </form>
+                </section>
             </div>
         </header>
         <nav class="tabs">
@@ -264,10 +272,10 @@
                     <img src="img/ico.png" alt="logo">
                 </span>
 
-                <div class="text header-text">
+                <!-- <div class="text header-text">
                     <span class="name">Ларин Никита Маратович</span>
                     <span class="subname">IP: 10.42.136.97</span>
-                </div>
+                </div> -->
             </div>
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -474,7 +482,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a href="#">
+                    <a href="#" onclick="openLoginForm()">
                         <svg xmlns="http://www.w3.org/2000/svg" style="fill:707070" width="24" height="24"
                             viewBox="0 0 24 24" class="icon">
                             <path d="m13 16 5-4-5-4v3H4v2h9z" />
@@ -493,10 +501,10 @@
             <path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
         </svg>
     </button>
-    <div id="ip-show">
+    <!-- <div id="ip-show">
         <p>Ларин Никита Мараттович</p>
         <p>IP: 10.42.136.97</p>
-    </div>
+    </div> -->
     <script src="js/main.js"></script>
 </body>
 
