@@ -1,0 +1,146 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .container {
+    margin: 0;
+    flex-grow: 1;
+}
+
+aside {
+    padding: 10px;
+    margin: 0 10px;
+
+    background-color: #f7f7f9;
+    border-radius: 10PX;
+
+    min-width: 250px;
+    max-width: 250px;
+}
+
+aside h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* =============================================== */
+
+.book-page {}
+
+.book-page__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-page__head h2 {
+    align-self: center;
+}
+
+.book-page__head button {
+    margin: 5px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-page__head button,
+.book-page__head button span {
+    transition: all 0.3s ease;
+}
+
+.book-page__head button svg path {
+    transition: all 0.1s ease;
+}
+
+.book-page__head button:hover,
+.book-page__head button:hover span,
+.book-page__head button:hover svg path {
+    background-color: #eef2fe;
+    border-radius: 15px;
+    color: #96afe7;
+    fill: #96afe7;
+}
+
+.book-page__head button span {
+    padding-top: 2px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =============================================== */
+
+.book-page__content {}
+
+/* =============================================== */
+
+.book-page__bottom {}
+
+/* =============================================== */
+
+.control>*{
+    margin-bottom: 20px;
+}
+
+.control-tables {}
+
+.btns-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.btns-list button {
+    padding: 5px;
+    background-color: #699d75;
+    border-radius: 10px;
+
+    color: #f1f1f1;
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    transition: background-color .4s linear;
+}
+
+.btns-list button:hover{
+    background-color: #48A348;
+}
+
+.search {}
+
+.search-form {}
+
+.search-input {}
+
+.search-btn {}
+
+.print {}
+
+.links {}
+
+.links-list a {
+    font-size: 16px;
+    transition: all .1s ease-out;
+    position: relative;
+    cursor: pointer;
+
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.links-list a {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.links-list a:hover {
+    background-size: 100% 2px;
+}
