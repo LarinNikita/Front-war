@@ -148,12 +148,12 @@ footer {
     align-items: center;
 }
 
-.login-form > * {
+.login-form>* {
     z-index: 5;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .login-close {
@@ -597,9 +597,9 @@ header .image-text .header-text {
     background-color: #ddd;
 }
 
-input[type="text"],
-input[type="password"],
-textarea {
+input,
+textarea,
+select {
     -webkit-appearance: none;
     width: 100%;
     padding: 0.375rem 0.75rem;
@@ -644,8 +644,7 @@ textarea::placeholder {
     opacity: 0.4;
 } */
 
-input[type="text"]:focus,
-input[type="password"]:focus,
+input:focus,
 textarea:focus {
     background-color: #fff;
     border-color: #bdbdbd;
@@ -653,10 +652,8 @@ textarea:focus {
     box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }
 
-input[type="text"]:disabled,
-input[type="text"][readonly],
-input[type="password"]:disabled,
-input[type="password"][readonly],
+input:disabled,
+input[readonly]
 textarea:disabled,
 textarea[readonly] {
     background-color: #f5f5f5;
@@ -665,6 +662,31 @@ textarea[readonly] {
 
 textarea {
     resize: vertical;
+}
+
+select {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-image: url('../img/icons/arrow-down.svg');
+    background-position: calc(100% - 3px) center;
+}
+
+.search-group {
+    /* display: flex; */
+    margin-top: 10px;   
+
+    position: relative;
+}
+
+.search-group input {
+    position: relative;
+    padding-right: 35px;
+}
+
+.search-group button {
+    position: absolute;
+    top: 8px;
+    right: 3%;
 }
 
 [data-wysihtml-dialog] {
