@@ -57,11 +57,11 @@ var closeLoginForm = function() {
     body.style.overflow = "auto";
 };
 
-document.addEventListener("keyup", function(e) {
-	if (e.keyCode == 27 || e.keyCode == 13) {
-		closeForm();
-	}
-});
+// document.addEventListener("keyup", function(e) {
+// 	if (e.keyCode == 27 || e.keyCode == 13) {
+// 		closeForm();
+// 	}
+// });
 
 function show_hide_password(target){
 	var input = document.getElementById('password-input');

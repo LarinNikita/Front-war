@@ -12,13 +12,64 @@
     padding: 10px;
     margin: 0 15px;
 
-    min-width: 250px;
-    max-width: 250px;
+    width: 250px;
 }
 
 .aside h3 {
     text-align: center;
     margin: 10px auto 10px;
+}
+
+/* ============================================== */
+
+aside:nth-child(1){
+    padding-right: 0;
+}
+
+.departments__list {
+    counter-reset: li;
+    list-style: none;
+    font-size: 12px;
+    padding: 0;
+}
+
+.departments__list a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2.5em;
+    margin: .5em 0;
+    background: #f1f1f9;
+    text-decoration: none;
+    border-radius: .5em;
+    transition: all .3s ease-out;
+}
+
+.departments__list a::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #707070;
+    height: 1.7em;
+    width: 1.7em;
+    line-height: 1.8em;
+    /* border: .3em solid #ddd; */
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+.departments__list a:hover {
+    box-shadow: -1px 1px #699d75,
+                -2px 2px #699d75,
+                -3px 3px #699d75,
+                -4px 4px #699d75,
+                -5px 5px #699d75;
+    transform: translateX(5px);
 }
 
 /* ============================================== */
@@ -35,7 +86,7 @@
 }
 
 .aside-btn {
-    padding: 10px 8px;
+    padding: 10px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +105,7 @@
 .aside-btn span {
     padding-top: 2px;
     padding-left: 5px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     white-space: nowrap;
 }
@@ -86,3 +137,130 @@
 .sub-link:hover {
     background-size: 100% 2px;
 }
+
+/* ========================================== */
+.caption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-table {
+    border: 1px solid #000;
+}
+
+.user-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.user-table thead {
+    background-color: #699d75;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+
+    align-self: start;
+}
+
+.user-table th {
+    color: #f7f7f9;
+    font-size: 14px;
+    font-weight: bold;
+
+    padding: 10px;
+
+    /* text-align: center; */
+}
+
+.user-table tbody {
+    /* max-height: calc(90vh - 200px); */
+    /* overflow-y: auto; */
+}
+
+.user-table td {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.user-table__control {
+    width: 100px;
+}
+
+.user-table td:nth-child(-n+5) {
+    text-align: left;
+}
+
+.user-table td svg path {
+    fill: #707070;
+}
+
+.user-table td svg:hover path {
+    fill: deepskyblue;
+    transition: all .2s ease;
+}
+
+.user-table__control:nth-last-child(1) a:nth-child(1) svg:hover path {
+    fill: gold;
+    transition: all .2s ease;
+}
+
+.user-table__control:nth-last-child(1) a:nth-child(2) svg:hover path {
+    fill: tomato;
+    transition: all .2s ease;
+}
+
+.user-table__control:nth-last-child(1) a:nth-child(3) svg:hover path {
+    fill: forestgreen;
+    transition: all .2s ease;
+}
+
+
+
+
+
+
+/* ==================================== */
+
+aside {
+    max-height: 800px;
+
+    position: sticky;
+        position: -webkit-sticky;
+        top: 50px;
+}
+
+.departments__list {
+    max-height: 740px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.aside {
+    font-size: 12px;
+}
+
+.aside h3{
+    font-size: 16px;
+}
+
+input[type="search"]{
+    font-size: 12px;
+}
+
+select{
+    font-size: 12px;
+}
+
+.caption h2 {
+    font-size: 18px;
+}
+
+.caption {
+    margin-bottom: 10px;
+}
+
+/* https: //denis-creative.com/fixed-block-on-scroll-with-ie-support/ */

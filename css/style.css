@@ -261,16 +261,16 @@ footer {
 .login-form:before {
     bottom: 15vh;
     border-radius: 45%;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
 }
 
 .login-form:after {
     bottom: 12vh;
     opacity: .5;
     border-radius: 47%;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
+    -webkit-animation-duration: 40s;
+    animation-duration: 40s;
 }
 
 @-webkit-keyframes rotate {
@@ -685,7 +685,7 @@ select {
 
 .search-group button {
     position: absolute;
-    top: 8px;
+    top: 20%;
     right: 3%;
 }
 
