@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/print.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <title>Филиал ППК «Роскадастр» по Кемеровской области - Кузбассу</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <table>
+             <!-- @foreach ($depatments as $depatment) -->
+            <thead>
+                <th colspan="5"><h3>По отделам/кабинетам/алфавиту</h3></th>
+            </thead>
+            <tbody>
+                <!-- @foreach ($users as $user) -->
+                <tr>
+                    <th scope="row">{{ $loop->iteration }}</th>
+                    <th>{{ $user->FIO }}</th>
+                    <th>{{ $user->Posts }}</th>
+                    <th>{{ $user->officeNumber }}</th>
+                    <th>{{ $user->IPPhone }}</th>
+                  </tr>
+                <!-- @endforeach -->
+            </tbody>
+            <!-- @endforeach -->
+        </table>
+    </div>
+</body>
+
+</html>
