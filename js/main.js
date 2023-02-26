@@ -37,40 +37,53 @@ toggle.onclick = function () {
 
 var button = document.getElementById('loginForm');
 
-var openLoginForm = function() {
-	button.className = 'active';
+var openLoginForm = function () {
+    button.className = 'active';
     body.style.overflow = "hidden";
 };
 
-var checkInput = function(input) {
-	if (input.value.length > 0) {
-		input.className = 'active';
+var checkInput = function (input) {
+    if (input.value.length > 0) {
+        input.className = 'active';
         body.style.overflow = "hidden";
-	} else {
-		input.className = '';
+    } else {
+        input.className = '';
         body.style.overflow = "auto";
-	}
+    }
 };
 
-var closeLoginForm = function() {
-	button.className = '';
+var closeLoginForm = function () {
+    button.className = '';
     body.style.overflow = "auto";
 };
 
-document.addEventListener("keyup", function(e) {
-	if (e.keyCode == 27 || e.keyCode == 13) {
-		closeForm();
-	}
-});
+// document.addEventListener("keyup", function(e) {
+// 	if (e.keyCode == 27 || e.keyCode == 13) {
+// 		closeForm();
+// 	}
+// });
 
-function show_hide_password(target){
-	var input = document.getElementById('password-input');
-	if (input.getAttribute('type') == 'password') {
-		target.classList.add('view');
-		input.setAttribute('type', 'text');
-	} else {
-		target.classList.remove('view');
-		input.setAttribute('type', 'password');
-	}
-	return false;
+function show_hide_password(target) {
+    var input = document.getElementById('password-input');
+    if (input.getAttribute('type') == 'password') {
+        target.classList.add('view');
+        input.setAttribute('type', 'text');
+    } else {
+        target.classList.remove('view');
+        input.setAttribute('type', 'password');
+    }
+    return false;
 }
+
+
+
+var PrintForm = document.querySelector(".print-sheet");
+
+var openPrintForm = function () {
+    PrintForm.style.display = "block";
+    body.style.overflow = "hidden";
+};
+var closePrintForm = function () {
+    PrintForm.style.display = "none";
+    body.style.overflow = "auto";
+};
