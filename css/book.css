@@ -244,6 +244,10 @@
 
 .search {}
 
+.search__form select {
+    margin-bottom: 10px;
+}
+
 .search__form select,
 .search-group input {
     font-size: 12px;
@@ -315,6 +319,7 @@
 .print-sheet-form  textarea {
     min-height: 50px;
     max-height: 500px;
+    resize: vertical;
 }
 
 .print-sheet-close {
