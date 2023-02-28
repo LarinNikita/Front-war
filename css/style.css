@@ -325,8 +325,17 @@ header .image-text .header-text {
 }
 
 .sidebar.close .menu {
-    overflow: hidden;
     transition: all .5s ease;
+}
+
+.sidebar.close .menu::-webkit-scrollbar {
+    display: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .sidebar.close .menu{
+        overflow: hidden;
+    }
 }
 
 .menu {
@@ -519,6 +528,7 @@ header .image-text .header-text {
     align-items: center;
     padding: 10px 15px;
     border-radius: 15px;
+    transition: background-color .4s ease;
 }
 
 .button-svg svg {
@@ -529,11 +539,7 @@ header .image-text .header-text {
 .button-svg span {
     padding: 3px 0 0 5px;
     font-weight: 600;
-}
-
-.button-svg,
-.button-svg span {
-    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .button-svg svg path {
@@ -541,11 +547,14 @@ header .image-text .header-text {
 }
 
 .button-svg:hover,
-.button-svg:hover span,
 .button-svg:hover svg path {
     background-color: #eef2fe;
     color: #96afe7;
     fill: #96afe7;
+}
+
+.button-svg:hover span{
+    color: #96afe7;
 }
 
 .button {
@@ -630,6 +639,11 @@ select:hover {
     box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
 }
 
+input[type="text"]:-moz-read-only, input[type="password"]:-moz-read-only, input[type="search"]:-moz-read-only, input[type="email"]:-moz-read-only, textarea:-moz-read-only {
+    background-color: #f5f5f5;
+    opacity: 1;
+}
+
 input[type="text"]:disabled,
 input[type="text"]:read-only,
 input[type="password"]:disabled,
@@ -642,6 +656,22 @@ textarea:disabled,
 textarea:read-only {
     background-color: #f5f5f5;
     opacity: 1;
+}
+
+input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    opacity: 0.4;
+}
+
+input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="email"]::-moz-placeholder, textarea::-moz-placeholder {
+    opacity: 0.4;
+}
+
+input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    opacity: 0.4;
+}
+
+input[type="text"]::-ms-input-placeholder, input[type="password"]::-ms-input-placeholder, input[type="search"]::-ms-input-placeholder, input[type="email"]::-ms-input-placeholder, textarea::-ms-input-placeholder {
+    opacity: 0.4;
 }
 
 input[type="text"]::placeholder,
@@ -658,7 +688,9 @@ textarea::placeholder {
 }
 
 select {
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-image: url('../img/icons/arrow-down.svg');
@@ -764,7 +796,10 @@ select {
 .checkbox>span {
     display: inline-flex;
     align-items: center;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .checkbox>span::before {
@@ -935,4 +970,45 @@ select {
     top: 10% !important;
     left: auto !important;
     right: 10% !important;
+}
+
+#scroll2Top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    background-color: #5F5F60;
+    border-radius: 6px;
+    left: 20px;
+    padding: 5px 5px 0;
+}
+
+/* ====================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table svg path {
+    fill: #707070;
+    transition: all .2s ease;
+}
+
+thead {
+    background-color: #699d75;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f0f8;
+}
+
+th {
+    color: #f0f8ff;
+    padding: 10px 5px;
+}
+
+td {
+    font-size: 14px;
+    text-align: center;
+    padding: 5px;
 }

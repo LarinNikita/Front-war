@@ -44,3 +44,30 @@ function previewFile() {
         preview.src = "";
     }
 }
+
+window.onscroll = function(){
+    scrollFunction()
+};
+
+function scrollFunction(){
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        document.getElementById("scroll2Top").style.display = "block";
+    }
+    else{
+        document.getElementById("scroll2Top").style.display = "none";
+    }
+}
+
+var t;
+function topFunction(){
+
+    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+    if (top > 0){
+        window.scrollBy(0, -70);
+        t = setTimeout('topFunction()', 20);
+    }
+    else{
+        clearTimeout(t);
+        return false;
+    }
+}
