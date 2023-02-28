@@ -336,6 +336,51 @@
 
 /* ================================== */
 
+.input-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-groups .input-group {
+    margin: 10px;
+    width: 300px;
+}
+
+.red-button{
+    padding: 10px;
+        border-radius: 0.25rem;
+        background-color: #b34b4b;
+        font-size: 16px;
+        color: #f1f1f1;
+        font-weight: bold;
+        transition: background-color 0.3s linear;
+        cursor: pointer;
+}
+
+.red-button:hover{
+    background-color: #c94141;
+}
+
+.user-add-form__button {
+   margin: 0 auto;
+    align-self: center;
+    padding: 10px;
+    border-radius: 0.25rem;
+    background-color: #4bb34b;
+    font-size: 16px;
+    color: #f1f1f1;
+    font-weight: bold;
+    transition: background-color 0.3s linear;
+    cursor: pointer;
+}
+
+.user-add-form__button:hover {
+    background-color: #48A348;
+}
+
+/* ================================== */
+
 @media all and (min-width: 1200px) {
     .aside {
         max-height: 790px;
