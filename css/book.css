@@ -215,6 +215,50 @@
 
 /* ================================== */
 
+/* .page__body {
+    display: flex;
+    justify-content: center;
+} */
+
+.page-user-add {
+    background-color: #f0f0f8;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input-groups {
+    display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+        justify-content: center;
+}
+
+.page-user-add .input-group {
+    width: 500px;
+    margin: 10px;
+   
+}
+
+.radio-flex {
+    display: flex;
+}
+
+.radio-flex .radio {
+    margin: 0 0.5rem;
+}
+
+.page-user-add .button {
+    align-self: center;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+/* ================================== */
+
 @media all and (min-width: 1200px) {
     .aside {
         max-height: 790px;

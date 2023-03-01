@@ -77,23 +77,23 @@
     border-radius: 0 25px 25px 0;
 }
 
-.notification-control a {
+.notification-control button {
     margin: 10px;
 }
 
-.notification-control a svg path {
+.notification-control button svg path {
     transition: all 0.3s ease;
 }
 
-.notification-control a:nth-child(1):hover svg path {
+.notification-control .change:hover svg path {
     fill: gold;
 }
 
-.notification-control a:nth-child(2):hover svg path {
+.notification-control .delete:hover svg path {
     fill: tomato;
 }
 
-.notification-control a:nth-child(3):hover svg path {
+.notification-control .visibility:hover svg path {
     fill: slateblue;
 }
 
@@ -289,19 +289,19 @@
     border-radius: 0 20px 20px 0;
 }
 
-.news__item--control a {
+.news__item--control button {
     margin: 10px;
 }
 
-.news__item--control a svg path {
+.news__item--control button svg path {
     transition: all 0.3s ease;
 }
 
-.news__item--control a:nth-child(1):hover svg path {
+.news__item--control button[type="button"]:hover svg path {
     fill: gold;
 }
 
-.news__item--control a:nth-child(2):hover svg path {
+.news__item--control button[type="submit"]:hover svg path {
     fill: tomato;
 }
 
