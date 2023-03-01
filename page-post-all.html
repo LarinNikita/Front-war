@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/book.css">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <title>Филиал ППК «Роскадастр» по Кемеровской области - Кузбассу</title>
 </head>
@@ -35,14 +36,19 @@
                 <div class="page">
                     <section class="page__head">
                         <div class="page__head--title">
-                           <img src="img/icons/bx-bell.svg" alt="page-head-img">
-                           <h2></h2>
+                            <img src="img/icons/bx-user-pin.svg" alt="page-head-img">
+                            <h2>Должности</h2>
                         </div>
                         <div class="page__head--btns">
                             <button class="button-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="fill:#707070" width="24" height="24" viewBox="0 0 24 24"><path d="M12 10c1.151 0 2-.848 2-2s-.849-2-2-2c-1.15 0-2 .848-2 2s.85 2 2 2zm0 1c-2.209 0-4 1.612-4 3.6v.386h8V14.6c0-1.988-1.791-3.6-4-3.6z"/><path d="M19 2H5c-1.103 0-2 .897-2 2v13c0 1.103.897 2 2 2h4l3 3 3-3h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm-5 15-2 2-2-2H5V4h14l.002 13H14z"/></svg>
+                                <span>Добавить должность</span>
+                            </button>
+                            <button class="button-svg">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     style="fill: rgba(112, 112, 112, 1);">
-                                    <path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z">
+                                    <path
+                                        d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z">
                                     </path>
                                 </svg>
                                 <span>Назад</span>
@@ -50,10 +56,53 @@
                         </div>
                     </section>
                     <section class="page__body">
-
+                        <table class="post-table">
+                            <thead>
+                                <tr>
+                                    <th class="column1">Название должности</th>
+                                    <th class="column2">Управление</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="column1">Главный lullen</td>
+                                    <td class="column2">
+                                        <button class="change" type="button" onclick="location.href=''" title="Редактирование">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M19.045 7.401c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.378-.378-.88-.586-1.414-.586s-1.036.208-1.413.585L4 13.585V18h4.413L19.045 7.401zm-3-3 1.587 1.585-1.59 1.584-1.586-1.585 1.589-1.584zM6 16v-1.585l7.04-7.018 1.586 1.586L7.587 16H6zm-2 4h16v2H4z" />
+                                            </svg>
+                                        </button>
+                                        <form action="" method="post">
+                                            <button class="delete" type="submit" title="Удалить">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(112, 112, 112, 1);"><path d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"></path></svg>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="column1">lullen неполноценный</td>
+                                    <td class="column2">
+                                        <button class="change" type="button" onclick="location.href=''" title="Редактирование">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24">
+                                                <path
+                                                    d="M19.045 7.401c.378-.378.586-.88.586-1.414s-.208-1.036-.586-1.414l-1.586-1.586c-.378-.378-.88-.586-1.414-.586s-1.036.208-1.413.585L4 13.585V18h4.413L19.045 7.401zm-3-3 1.587 1.585-1.59 1.584-1.586-1.585 1.589-1.584zM6 16v-1.585l7.04-7.018 1.586 1.586L7.587 16H6zm-2 4h16v2H4z" />
+                                            </svg>
+                                        </button>
+                                        <form action="" method="post">
+                                            <button class="delete" type="submit" title="Удалить">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(112, 112, 112, 1);"><path d="M15 2H9c-1.103 0-2 .897-2 2v2H3v2h2v12c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2V8h2V6h-4V4c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm8 16H7V8h10v12z"></path></svg>
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </section>
                     <section class="page__bottom">
-                        
+
                     </section>
                 </div>
             </div>
@@ -167,7 +216,7 @@
                     </li>
                     <li class="nav-link">
                         <a href="#" title="Уведомления">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill='#707070' class="icon"  
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill='#707070' class="icon"
                                 viewBox="0 0 24 24">
                                 <path
                                     d="M19 13.586V10c0-3.217-2.185-5.927-5.145-6.742C13.562 2.52 12.846 2 12 2s-1.562.52-1.855 1.258C7.185 4.074 5 6.783 5 10v3.586l-1.707 1.707A.996.996 0 0 0 3 16v2a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-2a.996.996 0 0 0-.293-.707L19 13.586zM19 17H5v-.586l1.707-1.707A.996.996 0 0 0 7 14v-4c0-2.757 2.243-5 5-5s5 2.243 5 5v4c0 .266.105.52.293.707L19 16.414V17zm-7 5a2.98 2.98 0 0 0 2.818-2H9.182A2.98 2.98 0 0 0 12 22z" />

@@ -52,6 +52,14 @@
 
 .page__body {
     overflow-x: auto;
+    max-height: calc(80vh - 100px);
+    margin-bottom: 0px !important;
+}
+
+.user-table thead {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
 
 .user-table td:nth-child(-n+4) {
@@ -62,16 +70,8 @@
     fill: skyblue;
 }
 
-.user-table .column11 a:nth-child(1):hover svg path {
-    fill: gold;
-}
-
-.user-table .column11 a:nth-child(2):hover svg path {
-    fill: tomato;
-}
-
-.user-table .column11 a:nth-child(3):hover svg path {
-    fill: forestgreen;
+.user-table .column11>form {
+    display: inline-block;
 }
 
 .user-table .column1 {
@@ -215,11 +215,6 @@
 
 /* ================================== */
 
-/* .page__body {
-    display: flex;
-    justify-content: center;
-} */
-
 .page-user-add {
     background-color: #f0f0f8;
     border-radius: 20px;
@@ -258,6 +253,52 @@
 }
 
 /* ================================== */
+
+
+.department-table,
+.post-table {
+   width: 70%;
+   margin: 10px auto;
+}
+
+.department-table .column1,
+.post-table .column1 {
+    width: auto;
+}
+
+.department-table .column2,
+.post-table .column2 {
+    width: 120px;
+}
+
+.department-table .column2>form ,
+.post-table .column2>form {
+    display: inline-block;
+}
+
+.department-add,
+.post-add {
+    width: 50%;
+    margin: 10px auto;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #f0f0f8;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.department-add .button,
+.post-add .button {
+    align-self: center;
+    width: 200px;
+}
+
+
+
+/* ================================== */
+
 
 @media all and (min-width: 1200px) {
     .aside {

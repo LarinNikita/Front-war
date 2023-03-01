@@ -1014,3 +1014,16 @@ td {
     text-align: center;
     padding: 5px;
 }
+
+.change:hover svg path {
+    fill: gold;
+}
+
+.reset:hover svg path,
+.delete:hover svg path {
+    fill: tomato;
+}
+
+.check:hover svg path {
+    fill: forestgreen;
+}
